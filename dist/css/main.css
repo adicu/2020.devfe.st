@@ -204,7 +204,7 @@ button:enabled {
 button:enabled a {
     transition: var(0.5);
 }
-button:enabled:hover, a:hover, .chip:hover, .sponsor-logo:hover {
+button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     box-shadow: none;
     -ms-transform: scale(0.95);
     -webkit-transform: scale(0.95);
@@ -328,7 +328,7 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-logo:hover {
     padding-left: 0;
     padding-right: 0;
 }
-.sponsor-logo {
+.sponsor-image {
     width: 20vw;
     max-width: 400px;
     min-width: 140px;
