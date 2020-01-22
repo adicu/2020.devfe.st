@@ -39,6 +39,9 @@ a {
     padding: 0 !important;
     background-color: white;
 }
+.navbar-collapse {
+    background-color: white;
+}
 .navbar-nav {
     padding-bottom: 5px;
 }
@@ -279,14 +282,14 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     Calendar
 */
 #calendar {
-    width: 70%;
+    width: 80%;
     border: solid 1px lightgray;
     border-radius: 4px;
     box-shadow: 0 0 15px 1px rgba(0,0,0,0.04), 0 0 15px 1px rgba(0,0,0,0.04);
 }
 #calendar-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 8px;
 }
@@ -306,11 +309,11 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     margin: 0;
 }
 .tui-view-15 {
-    height: 70vh !important;
-    overflow: hidden !important;
+    height: 60vh !important;
+    /* overflow: hidden !important; */
 }
 .tui-view-9 {
-    height: 60vh !important;
+    height: calc(60vh - 76px) !important;
 }
 .tui-full-calendar-time-resize-handle.handle-x {
     display: none !important;
@@ -341,7 +344,7 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     FAQ
 */
 .faqs {
-    max-height: 70vh;
+    max-height: 60vh;
     overflow: auto;
     border: solid 1px lightgray;
     border-radius: 4px;
@@ -367,7 +370,7 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     width: calc(100vw - 6rem) !important;
 }
 .codeofconduct-viewer {
-    height: 70vh;
+    height: 60vh;
     width: 100% !important;
     border: none;
     width: calc(100vw - 6rem) !important;

@@ -330,7 +330,7 @@ const calendarsList = [
   {
     id: 2,
     name: 'Food',
-    color: '#404040',
+    color: '#ffffff',
     bgColor: '#50e582ff',
     dragBgColor: '#50e582ff',
     borderColor: '#50e582ff'
