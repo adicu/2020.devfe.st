@@ -399,59 +399,62 @@ const monthsList = [
 let next = () => {}
 let prev = () => {}
 let today = () => {}
-try {
-  tui.Calendar.setTimezoneOffset(new Date().getTimezoneOffset());
-  const Calendar = tui.Calendar;
-  const isSmallWindow = window.innerWidth < 500;
-  const calendar = new Calendar('#calendar-inner', {
-    usageAnalytics: false,
-    defaultView: isSmallWindow ? 'day' : 'week',
-    taskView: false,
-    scheduleView: true,
-    template: {
-      monthDayname: function(dayname) {
-        return '<span class="calendar-week-dayname-name font-upper">' + dayname.label + '</span>';
-      }
-    },
-    calendars: calendarsList,
-    week: {
-      // hourStart: 8,
-      startDayOfWeek: 1,
-    },
-    isReadOnly: true,
-    useDetailPopup: true,
-  });
-  const setMonth = () => {
-    document.getElementById('calendar-month').innerHTML = monthsList[calendar.getDate().getMonth()]
-  }
-  next = () => {
-    calendar.next()
-    setMonth()
-  }
-  prev = () => {
-    calendar.prev()
-    setMonth()
-  }
-  today = () => {
-    calendar.setDate(new Date())
-    setMonth()
-  }
 
-  // Get schedules from schedules.js and set the current date
-  calendar.createSchedules(schedulesList, true)
-  calendar.setDate(new Date(2020, 1, 3))
-  setMonth()
-
-} catch (e) {
-  const errorText = e.toString()
-  document.getElementById('calendar-error').style.display = 'block';
-  document.getElementById('calendar').style.display = 'none';
-  let errorTextToDisplay = ''
-  if (errorText.includes('SecurityError')) {
-    // localStorage cannot be accessed. Show error.
-    errorTextToDisplay = 'Please allow cookies to view our nice schedule! 🍪<br>Or, check <span class="color-blue"><a target="_blank" href="https://www.facebook.com/adicu/">Facebook</a></span> for updates!';
-  } else {
-    errorTextToDisplay = 'An error occurred while displaying our schedule. 🤕<br>Try checking <span class="color-blue"><a target="_blank" href="https://www.facebook.com/adicu/">Facebook</a></span> for updates!';
+const renderCalendar = () => {
+  try {
+    tui.Calendar.setTimezoneOffset(new Date().getTimezoneOffset());
+    document.getElementById('calendar-inner').innerHTML = ''
+    const Calendar = tui.Calendar;
+    const calendar = new Calendar('#calendar-inner', {
+      usageAnalytics: false,
+      defaultView: isMobile() ? 'day' : 'week',
+      taskView: false,
+      scheduleView: [ 'time' ],
+      template: {
+        monthDayname: function(dayname) {
+          return '<span class="calendar-week-dayname-name font-upper">' + dayname.label + '</span>';
+        }
+      },
+      calendars: calendarsList,
+      week: {
+        // hourStart: 8,
+        startDayOfWeek: 1,
+      },
+      isReadOnly: true,
+      useDetailPopup: true,
+    });
+    const setMonth = () => {
+      document.getElementById('calendar-month').innerHTML = monthsList[calendar.getDate().getMonth()]
+    }
+    next = () => {
+      calendar.next()
+      setMonth()
+    }
+    prev = () => {
+      calendar.prev()
+      setMonth()
+    }
+    today = () => {
+      calendar.setDate(new Date())
+      setMonth()
+    }
+  
+    // Get schedules from schedules.js and set the current date
+    calendar.createSchedules(schedulesList, true)
+    calendar.setDate(new Date(2020, 1, 3))
+    setMonth()
+  
+  } catch (e) {
+    const errorText = e.toString()
+    document.getElementById('calendar-error').style.display = 'block';
+    document.getElementById('calendar').style.display = 'none';
+    let errorTextToDisplay = ''
+    if (errorText.includes('SecurityError')) {
+      // localStorage cannot be accessed. Show error.
+      errorTextToDisplay = 'Please allow cookies to view our nice schedule! 🍪<br>Or, check <span class="color-blue"><a target="_blank" href="https://www.facebook.com/adicu/">Facebook</a></span> for updates!';
+    } else {
+      errorTextToDisplay = 'An error occurred while displaying our schedule. 🤕<br>Try checking <span class="color-blue"><a target="_blank" href="https://www.facebook.com/adicu/">Facebook</a></span> for updates!';
+    }
+    document.getElementById('calendar-error').innerHTML = errorTextToDisplay;
   }
-  document.getElementById('calendar-error').innerHTML = errorTextToDisplay;
 }
