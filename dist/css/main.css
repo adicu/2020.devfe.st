@@ -69,7 +69,7 @@ a {
 .section {
     width: 100vw !important;
     height: 100vh !important;
-    /* overflow: hidden !important; */
+    overflow: hidden !important;
 }
 .container {
     width: 100vw !important;
