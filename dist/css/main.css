@@ -50,21 +50,10 @@ a {
     width: 100vw !important;
     height: 100vh !important;
     position: absolute !important;
-    z-index: 0;
     top: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
-}
-@media (min-width: 576px) {
-    #fullpage {
-        padding-top: 60px;
-    }
-}
-@media (min-width: 768px) {
-    #fullpage {
-        padding-top: 40px;
-    }
 }
 .section {
     width: 100vw !important;
