@@ -2,7 +2,7 @@ const fullPageJS = null;
 
 const loadSlideshow = () => {
 
-    document.body.style.overflow = isMobile() ? 'auto' : 'none';
+    // document.body.style.overflow = isMobile() ? 'auto' : 'none';
     const sections = document.getElementsByClassName('section')
     for (let i = 0; i < sections.length; i++) {
         sections[i].style.borderBottom = isMobile() ? 'solid 1px #999999' : 'none';
@@ -168,7 +168,7 @@ const loadSlideshow = () => {
 }
 
 const reloadSlideshow = () => {
-    document.body.style.overflow = isMobile() ? 'auto' : 'none';
+    // document.body.style.overflow = isMobile() ? 'auto' : 'none';
     const sections = document.getElementsByClassName('section')
     for (let i = 0; i < sections.length; i++) {
         sections[i].style.borderBottom = isMobile() ? 'solid 1px #999999' : 'none';

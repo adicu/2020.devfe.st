@@ -10,7 +10,6 @@ body {
     color: #404040;
     font-family: 'Lato', sans-serif;
     font-size: 16pt;
-    /* overflow: hidden !important; */
 }
 a {
     color: inherit !important;
@@ -299,7 +298,7 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
 }
 #calendar-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 8px;
 }
