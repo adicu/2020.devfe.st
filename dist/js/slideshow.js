@@ -17,7 +17,7 @@ const loadSlideshow = () => {
     
         //Scrolling
         css3: true,
-        responsiveHeight: 500,
+        // responsiveHeight: 500,
         scrollBar: isMobile(),
         scrollingSpeed: 800,
         autoScrolling: !isMobile(),

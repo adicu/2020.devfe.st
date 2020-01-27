@@ -34,7 +34,7 @@ a {
 .navbar {
     z-index: 1;
     top: 0;
-    position: fixed;
+    position: fixed !important;
     background: none;
     width: 100vw !important;
     padding: 0 !important;
