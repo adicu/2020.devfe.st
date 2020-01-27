@@ -49,7 +49,7 @@ a {
 #fullpage {
     width: 100vw !important;
     height: 100vh !important;
-    /* position: absolute !important; */
+    position: absolute !important;
     z-index: 0;
     top: 0 !important;
     right: 0 !important;
