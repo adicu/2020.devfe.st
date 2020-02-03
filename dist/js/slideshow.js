@@ -1,4 +1,4 @@
-const fullPageJS = null;
+let fullPageJS = null;
 
 const loadSlideshow = () => {
 
@@ -8,14 +8,14 @@ const loadSlideshow = () => {
     }
 
     fullPageJS = new fullpage('#fullpage', {
-        //Navigation
+        // Navigation
         menu: '#menu',
         anchors: [ 'Register', 'Schedule', 'Learn', /**'Judges', */ 'Prizes', 'Sponsors', 'FAQ', 'CodeofConduct', 'ContactUs' ],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'top',
     
-        //Scrolling
+        // Scrolling
         css3: true,
         // responsiveHeight: 500,
         scrollBar: isMobile(),
@@ -25,7 +25,6 @@ const loadSlideshow = () => {
         scrollDelay: 0,
         fitToSectionDelay: 100,
         interlockedSlides: false,
-        dragAndMove: true,
         offsetSections: false,
         fadingEffect: false,
         scrollOverflow: false,
@@ -33,14 +32,13 @@ const loadSlideshow = () => {
         touchSensitivity: 10,
         normalScrollElementTouchThreshold: 1,
         bigSectionsDestination: null,
-        normalScrollElements: [ '#calendar', '.faqs', '.codeofconduct' ],
     
-        //Accessibility
+        // Accessibility
         keyboardScrolling: true,
         animateAnchor: true,
         recordHistory: true,
     
-        //Design
+        // Design
         controlArrows: false,
         verticalCentered: true,
         paddingTop: '0',
@@ -49,7 +47,7 @@ const loadSlideshow = () => {
         parallax: false,
         parallaxOptions: {type: 'reveal', percentage: 50, property: 'translate'},
     
-        //Custom selectors
+        // Custom selectors
         sectionSelector: '.section',
         slideSelector: '.slide',
     
@@ -168,11 +166,21 @@ const loadSlideshow = () => {
 }
 
 const reloadSlideshow = () => {
-    const sections = document.getElementsByClassName('section')
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].style.borderBottom = isMobile() ? 'solid 1px #999999' : 'none';
+    if (fullPageJS) {
+      const sections = document.getElementsByClassName('section')
+      for (let i = 0; i < sections.length; i++) {
+          sections[i].style.borderBottom = isMobile() ? 'solid 1px #999999' : 'none';
+      }
+      fullPageJS.setScrollBar(isMobile())
+      fullPageJS.setAutoScrolling(!isMobile())
+      fullPageJS.setFitToSection(!isMobile())
     }
-    fullPageJS.setScrollBar(isMobile())
-    fullPageJS.setAutoScrolling(!isMobile())
-    fullPageJS.setFitToSection(!isMobile())
+}
+
+const allowScrolling = (allow) => {
+  try {
+    fullPageJS && fullPageJS.setAllowScrolling(allow)
+  } catch (e) {
+    console.error(e)
+  }
 }

@@ -14,6 +14,13 @@ body {
 a {
     color: inherit !important;
 }
+ul {
+    margin: 0;
+}
+li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
 
 /**
     Custom Styles
@@ -75,6 +82,9 @@ a {
 .content {
     max-width: 90vw;
 }
+.rounded {
+    border-radius: 8px;
+}
 
 /**
     Reusable Styles
@@ -97,6 +107,10 @@ a {
 }
 .font-logo {
     font-size: 70pt;
+    line-height: 64pt;
+}
+.font-sublogo {
+    font-size: 50pt;
     line-height: 64pt;
 }
 .font-title {
@@ -212,18 +226,26 @@ button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
     cursor: hand;
     cursor: pointer;
 }
-.button-dark {
-    color: #404040;
-    border: solid 2px #404040;
-    background-color: white;
+.button-dark, .button-blue {
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 14px;
     padding-right: 14px;
 }
+.button-dark {
+    color: #404040;
+    border: solid 2px #404040;
+    background-color: white;
+}
 .button-dark:active {
     color: #999999;
     border: solid 2px #999999;
+}
+.button-blue {
+    color: white;
+    background-color: #3b5998;
+    font-size: 10pt;
+    margin-top: 8px;
 }
 
 /**
@@ -403,6 +425,14 @@ div[class^='tui-view-'], div[class*=' tui-view-'] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/**
+    Blurbs
+*/
+.blurb {
+    display: flex;
+    align-items: center;
 }
 
 /**

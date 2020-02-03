@@ -101,7 +101,7 @@
                         <a href="#CodeofConduct" class="nav-link" href="#">Code of Conduct</a>
                   </li>
                   <li class="nav-item" data-menuanchor="ContactUs">
-                        <a href="#ContactUs" class="nav-link" href="#">Contact Us</a>
+                        <a href="#ContactUs" class="nav-link" href="#">Contact & Alerts</a>
                   </li>
                 </ul>
           </div>
@@ -113,7 +113,7 @@
                 <div class="container text-center row d-flex h-100">
                     <div class="col justify-content-center align-self-center">
                       <div class="devfest-title unselectable title font-logo mb-2 title-shadow">
-                        DevFest '20
+                        DevFest <span class="font-sublogo">'20</span>
                       </div>
                       <div class="devfest-subtitle font-large color-gray">
                         February 3rd - 9th, 2020
@@ -126,6 +126,10 @@
                       </div>
                       <button class="button-dark" onclick="navigate('https://adi839892.typeform.com/to/HbFw75')">
                         Register Here
+                      </button>
+                      <br/>
+                      <button class="button-blue" onclick="navigate('https://www.facebook.com/events/185500132508600/')">
+                        Get Updates on Facebook!
                       </button>
                       <div class="devfest-subtitle font-upper font-small color-gray mt-4">
                         Presented by <a target="_blank" href="https://adicu.com/">ADI</a target="_blank">
@@ -157,11 +161,11 @@
           <div id="SchedulePage" class="section bg-white">
               <div class="container">
                 <div id="calendar-error" class="justify-content-center text-center" style="display: none;"></div>
-                <div id="calendar" onmouseup="fullPageJS.setAllowScrolling(true)" onmousedown="fullPageJS.setAllowScrolling(false)" onmouseover="fullPageJS.setAllowScrolling(false)" onmouseout="fullPageJS.setAllowScrolling(true)">
+                <div id="calendar" onmouseover="allowScrolling(false)" onmouseout="allowScrolling(true)" onmousedo="allowScrolling(false)" onmouseout="allowScrolling(true)">
                   <div id="calendar-menu">
-                    <button onclick="prev()"><i data-feather="arrow-left" stroke="white" height="30px" width="30px"></i></button>
+                    <button onclick="prev()">←</button>
                     <div id="calendar-month">Month</div>
-                    <button onclick="next()"><i data-feather="arrow-right" stroke="white" height="30px" width="30px"></i></button>
+                    <button onclick="next()">→</button>
                   </div>
                   <div id="calendar-inner"></div>
                 </div>
@@ -182,7 +186,7 @@
                   </div>
                   <div>
                     <div class="font-large color-gray">
-                      Beginner
+                      <a href="https://learn.devfe.st/beginner/" target="_blank">Beginner</a>
                     </div>
                     Learn to build a personal website with HTML, CSS, and JavaScript.
                   </div>
@@ -196,7 +200,7 @@
                   </div>
                   <div>
                     <div class="font-large color-gray mb-1">
-                      Web Development
+                      <a href="https://learn.devfe.st/webdev/" target="_blank">Web Development</a>
                     </div>
                     Learn to build web apps with Flask and MongoDB.
                   </div>
@@ -207,7 +211,7 @@
                   </div>
                   <div>
                     <div class="font-large color-gray mb-1">
-                      Data Science
+                      <a href="https://learn.devfe.st/datascience/" target="_blank">Data Science</a>
                     </div>
                     Learn to make meaningful observations about data sets using Python.
                   </div>
@@ -218,7 +222,7 @@
                   </div>
                   <div>
                     <div class="font-large color-gray mb-1">
-                      Deep Learning
+                      <a href="https://learn.devfe.st/deeplearning/" target="_blank">Deep Learning</a>
                     </div>
                     Learn how artificial neural networks work using Python.
                   </div>
@@ -272,11 +276,21 @@
                 </div>
                 <div class="row track-card mt-3">
                   <div class="prize">
-                    <div class="font-heading color-green mb-1">
+                    <div class="font-heading color-blue mb-1">
                       <a target="_blank" href="https://www.microsoft.com/en-us/p/surface-go/8V9DP4LNKNSZ?s_kwcid=AL!4249!3!281068770621!e!!g!!surface+go&ef_id=CjwKCAiA35rxBRAWEiwADqB37-cLqpL1JkkJLARey13GpRruRbc37wvlRtESYLWwZWLCJCgwejB7-xoCo_EQAvD_BwE%3aG%3as&OCID=AID2000006_SEM_CjwKCAiA35rxBRAWEiwADqB37-cLqpL1JkkJLARey13GpRruRbc37wvlRtESYLWwZWLCJCgwejB7-xoCo_EQAvD_BwE%3aG%3as&activetab=pivot%3aoverviewtab">Surface Go</a>
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
                       Beginner's Prize
+                    </div>
+                  </div>
+                </div>
+                <div class="row track-card mt-3">
+                  <div class="prize">
+                    <div class="font-heading color-green mb-1">
+                      $1000 in <a target="_blank" href="https://digitalocean.com">DigitalOcean</a> Credits
+                    </div>
+                    <div class="font-medium font-upper mb-2 mt-2">
+                      Best Hack for Social Good
                     </div>
                   </div>
                 </div>
@@ -357,6 +371,7 @@
                   </div>
                   <div class="sponsors">
                     <img class="sponsor-image" onclick="navigate('https://www.digitalocean.com/')" src="img/logos/digitalocean.png"/>
+                    <img class="sponsor-image" onclick="navigate('https://www.nytimes.com/')" src="img/logos/nyt.png"/>
                   </div>
                 </div>
               </div>
@@ -368,7 +383,7 @@
                 <div class="row font-subtitle mb-4">
                   🙋‍♀️ Frequently Asked Questions
                 </div>
-                <div class="faqs font-medium" onmouseup="fullPageJS.setAllowScrolling(true)" onmousedown="fullPageJS.setAllowScrolling(false)" onmouseover="fullPageJS.setAllowScrolling(false)" onmouseout="fullPageJS.setAllowScrolling(true)">
+                <div class="faqs font-medium" onmouseover="allowScrolling(false)" onmouseout="allowScrolling(true)">
                   <div class="faq">
                     <div class="font-large color-dark mb-1">
                       What is DevFest?
@@ -427,7 +442,7 @@
                 <div class="row font-subtitle mb-4">
                   <a href="files/2020-code-of-conduct.pdf#view=fitH">📙 Code of Conduct</a>
                 </div>
-                <div id="codeofconduct" class="codeofconduct font-medium" onmouseup="fullPageJS.setAllowScrolling(true)" onmousedown="fullPageJS.setAllowScrolling(false)" onmouseover="fullPageJS.setAllowScrolling(false)" onmouseout="fullPageJS.setAllowScrolling(true)">
+                <div id="codeofconduct" class="codeofconduct font-medium" onmouseover="allowScrolling(false)" onmouseout="allowScrolling(true)">
                 </div>
               </div>
             </div>
@@ -436,11 +451,26 @@
             <div class="container">
               <div class="row d-block p-4 m-4">
                 <div class="row font-subtitle mb-4">
-                  💌 Contact
+                  🚨 Contact & Alerts
                 </div>
                 Interested in getting more involved with DevFest? Know someone who'd make a great judge? Is your company interested in sponsoring us? Send us a line below.
                 <div class="color-blue my-4">
                   <a target="_blank" href="mailto:devfest@adicu.com">devfest@adicu.com</a target="_blank">
+                </div>
+                <div class="bg-blue color-white p-2 rounded font-medium blurb">
+                  <i data-feather="alert-triangle" stroke="white" style="width: 40px; margin-right: 10px;" class="d-sm-inline-block d-none"></i>
+                  <div style="line-height: 1.5;">
+                    <div>The Department of Defense (DoD) is attending DevFest to recruit STEM, digital, and design talent for internships and full-time positions.</div>
+                    <span class="d-sm-inline-block d-none">
+                      <div>DoD offices conducting interviews include:</div>
+                      <ul>
+                        <li><a href="https://afresearchlab.com/" target="_blank">Air Force Research Lab’s Information Directorate</a> - the Air Force’s premier lab for digital, communications, AI, and cyber</li>
+                        <li><a href="https://kesselrun.af.mil/" target="_blank">Kessel Run</a> - the Air Force’s software development factory</li>
+                        <li><a href="https://www.nsin.us/x-force/" target="_blank">National Security Innovation Network (NSIN)</a> - DoD CTO’s innovation office </li>
+                      </ul>
+                    </span>
+                    <div style="text-decoration: underline;" class="mt-2"><a href="https://forms.gle/1jxrUCZuursqoejk8" target="_blank">Register for an interview at DevFest here.</a></div>
+                  </div>
                 </div>
                 <div id="credit" class="font-small mt-4 color-gray">
                   Built by 

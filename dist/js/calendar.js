@@ -10,6 +10,7 @@ const schedulesList = [
     id: 1,
     calendarId: 1,
     title: 'Kickoff',
+    body: 'Presented by Lydia Chilton and Chris Wiggins.',
     category: 'time',
     start: '2020-02-03T19:00:00-05:00',
     end: '2020-02-03T20:00:00-05:00',
@@ -31,7 +32,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-03T21:00:00-05:00',
     end: '2020-02-03T21:30:00-05:00',
-    location: 'TBA'
+    location: 'Mudd 825'
   },
   {
     id: 4,
@@ -40,7 +41,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-03T21:00:00-05:00',
     end: '2020-02-03T21:30:00-05:00',
-    location: 'TBA'
+    location: 'Mudd 233'
   },
   {
     id: 5,
@@ -49,7 +50,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-03T21:30:00-05:00',
     end: '2020-02-03T22:00:00-05:00',
-    location: 'TBA'
+    location: 'Mudd 825'
   },
   {
     id: 6,
@@ -58,7 +59,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-03T21:30:00-05:00',
     end: '2020-02-03T22:00:00-05:00',
-    location: 'TBA'
+    location: 'Mudd 233'
   },
   {
     id: 7,
@@ -67,20 +68,20 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-03T22:00:00-05:00',
     end: '2020-02-03T23:00:00-05:00',
-    location: 'TBA'
+    location: 'Mudd 825'
   },
   /**
    * Tuesday, Feb 4th
    */
   {
     id: 8,
-    calendarId: 3,
+    calendarId: 1,
     title: 'Intro to HTML and CSS',
+    body: 'This workshop will teach you how to style and structure websites with HTML & CSS. No experience necessary, but please bring a laptop!',
     category: 'time',
     start: '2020-02-04T19:00:00-05:00',
     end: '2020-02-04T20:00:00-05:00',
-    location: 'TBA',
-    description: 'This workshop will teach you how to style and structure websites with HTML & CSS. No experience necessary, but please bring a laptop!'
+    location: 'Mudd 233',
   },
   {
     id: 9,
@@ -89,7 +90,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-04T20:00:00-05:00',
     end: '2020-02-04T20:30:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   {
     id: 10,
@@ -98,16 +99,16 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-04T20:00:00-05:00',
     end: '2020-02-04T20:30:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 233',
   },
   {
     id: 11,
     calendarId: 5,
-    title: 'Web Dev Lecture',
+    title: 'Web Dev Micro Lecture',
     category: 'time',
     start: '2020-02-04T20:30:00-05:00',
     end: '2020-02-04T21:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   {
     id: 12,
@@ -116,7 +117,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-04T20:30:00-05:00',
     end: '2020-02-04T21:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 233',
   },
   {
     id: 13,
@@ -125,7 +126,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-04T21:00:00-05:00',
     end: '2020-02-04T22:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   {
     id: 14,
@@ -146,7 +147,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-05T19:00:00-05:00',
     end: '2020-02-05T20:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 233',
   },
   {
     id: 16,
@@ -155,16 +156,26 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-05T20:00:00-05:00',
     end: '2020-02-05T21:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 233',
   },
   {
     id: 17,
     calendarId: 1,
-    title: 'Intro to Algo Trading',
+    title: 'Intro to Flask',
+    body: 'This workshop will teach you about the basics of Flask, a Python microframework that allows you to build complex web applications with low overhead. You\'ll build a simple Columbia meal-swipe tracker and have a world of possibilities for future projects. This workshop is intended for folks with a basic understanding of HTML/CSS and Python, but any experience level is welcome. Please bring a laptop with Python installed.',
+    category: 'time',
+    start: '2020-02-05T20:00:00-05:00',
+    end: '2020-02-05T21:00:00-05:00',
+    location: 'Mudd 825',
+  },
+  {
+    id: 33,
+    calendarId: 1,
+    title: 'Intro to Crypto',
     category: 'time',
     start: '2020-02-05T21:00:00-05:00',
     end: '2020-02-05T22:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   {
     id: 18,
@@ -185,7 +196,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-06T19:00:00-05:00',
     end: '2020-02-06T20:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 233',
   },
   {
     id: 20,
@@ -203,7 +214,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-06T21:00:00-05:00',
     end: '2020-02-06T22:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   {
     id: 22,
@@ -212,20 +223,12 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-06T22:00:00-05:00',
     end: '2020-02-06T23:00:00-05:00',
-    location: 'TBA',
+    location: 'Mudd 825',
   },
   /**
    * Friday, Feb 7th
    */
-  {
-    id: 23,
-    calendarId: 2,
-    title: 'Winter Party',
-    category: 'time',
-    start: '2020-02-07T19:00:00-05:00',
-    end: '2020-02-07T23:00:00-05:00',
-    location: 'TBA',
-  },
+
   /**
    * Saturday, Feb 8th
    */
@@ -314,9 +317,6 @@ const schedulesList = [
     location: 'Uris Library',
   },
 ]
-// schedulesList.forEach(schedule => {
-//   schedule.title += ` @ <i>${schedule.location}</i>`
-// })
 
 const calendarsList = [
   {
@@ -441,7 +441,7 @@ const renderCalendar = () => {
   
     // Get schedules from schedules.js and set the current date
     calendar.createSchedules(schedulesList, true)
-    calendar.setDate(new Date(2020, 1, 3))
+    calendar.setDate(new Date(2020, 1, 3, 22))
     setMonth()
   
   } catch (e) {
