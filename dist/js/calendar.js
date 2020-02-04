@@ -441,7 +441,11 @@ const renderCalendar = () => {
   
     // Get schedules from schedules.js and set the current date
     calendar.createSchedules(schedulesList, true)
-    calendar.setDate(new Date(2020, 1, 3, 22))
+    if (new Date() > new Date(2020, 1, 9)) {
+      calendar.setDate(new Date(2020, 1, 3, 22))
+    } else {
+      calendar.setDate(new Date())
+    }
     setMonth()
   
   } catch (e) {
