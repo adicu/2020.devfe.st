@@ -10,7 +10,7 @@ const loadSlideshow = () => {
     fullPageJS = new fullpage('#fullpage', {
         // Navigation
         menu: '#menu',
-        anchors: [ 'Register', 'Schedule', 'Learn', /**'Judges', */ 'Prizes', 'Sponsors', 'FAQ', 'CodeofConduct', 'ContactUs' ],
+        anchors: [ 'Register', 'Schedule', 'Learn', 'Prizes', 'Judges', 'Sponsors', 'FAQ', 'CodeofConduct', 'ContactUs' ],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'top',
@@ -70,20 +70,20 @@ const loadSlideshow = () => {
                   case 3:
                     $(".bg-fall").animate("slideOutRight");
                     break;
-                  // case 4:
-                  //   $(".bg-summer").animate("slideOutRight");
-                  //   break;
                   case 4:
+                    $(".bg-summer").animate("slideOutRight");
+                    break;
+                  case 5:
                     $("#sponsors-gold").animate("slideOutLeft");
                     $("#sponsors-silver").animate("slideOutRight");
                     $("#sponsors-bronze").animate("slideOutLeft");
                     break;
-                  case 5:
+                  case 6:
                     
                     break;
-                  case 6:
-                    break;
                   case 7:
+                    break;
+                  case 8:
                     $("#credit").animate("fadeOut");
                     break;
                   default:
@@ -108,20 +108,20 @@ const loadSlideshow = () => {
                   case 3:
                     $(".bg-fall").animate("slideInRight");
                     break;
-                  // case 4:
-                  //   $(".bg-summer").animate("slideInRight");
-                  //   break;
                   case 4:
+                    $(".bg-summer").animate("slideInRight");
+                    break;
+                  case 5:
                     $("#sponsors-gold").animate("slideInLeft");
                     $("#sponsors-silver").animate("slideInRight");
                     $("#sponsors-bronze").animate("slideInLeft");
                     break;
-                  case 5:
+                  case 6:
                     
                     break;
-                  case 6:
-                    break;
                   case 7:
+                    break;
+                  case 8:
                     $("#credit").animate("jackInTheBox");
                     break;
                   default:

@@ -428,6 +428,22 @@ div[class^='tui-view-'], div[class*=' tui-view-'] {
 }
 
 /**
+    Judging
+*/
+.judge-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.judge-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+/**
     Blurbs
 */
 .blurb {
