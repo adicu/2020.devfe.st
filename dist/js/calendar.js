@@ -196,7 +196,7 @@ const schedulesList = [
     category: 'time',
     start: '2020-02-06T19:00:00-05:00',
     end: '2020-02-06T20:00:00-05:00',
-    location: 'Mudd 233',
+    location: 'Mudd 833',
   },
   {
     id: 20,
