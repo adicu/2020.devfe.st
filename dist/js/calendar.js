@@ -286,7 +286,7 @@ const schedulesList = [
     title: 'Hacking Sprint III',
     category: 'time',
     start: '2020-02-09T00:30:00-05:00',
-    end: '2020-02-09T08:00:00-05:00',
+    end: '2020-02-09T09:00:00-05:00',
     location: 'Uris Library',
   },
   {
@@ -294,8 +294,8 @@ const schedulesList = [
     calendarId: 2,
     title: 'Breakfast',
     category: 'time',
-    start: '2020-02-09T08:00:00-05:00',
-    end: '2020-02-09T08:30:00-05:00',
+    start: '2020-02-09T09:00:00-05:00',
+    end: '2020-02-09T09:30:00-05:00',
     location: 'Uris Library',
   },
   {
@@ -303,7 +303,7 @@ const schedulesList = [
     calendarId: 7,
     title: 'Hacking Sprint IV',
     category: 'time',
-    start: '2020-02-09T08:30:00-05:00',
+    start: '2020-02-09T09:30:00-05:00',
     end: '2020-02-09T11:00:00-05:00',
     location: 'Uris Library',
   },
