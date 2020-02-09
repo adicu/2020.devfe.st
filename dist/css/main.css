@@ -502,6 +502,8 @@ div[class^='tui-view-'], div[class*=' tui-view-'] {
     display: flex;
     justify-content: stretch;
     align-items: center;
+    cursor: hand;
+    cursor: pointer;
 }
 .btn-none {
     background: none !important;
