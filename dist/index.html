@@ -47,7 +47,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Engagement|Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Engagement|Lato:400,700&display=swap" rel="stylesheet">
 
     <!-- Calendar -->
     <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
@@ -69,7 +69,7 @@
     <!-- Navigational Bar -->
     <nav class="navbar navbar-expand-lg navbar-light unselectable">
           <a class="navbar-brand ml-3" rel="home" href="" title="DevFest">🌸</a>
-          <a class="navbar-brand title font-large" href="">DevFest <span class="ml-1 font-large">'20</span></a>
+          <a class="navbar-brand title font-large" href="">DevFest <span class="ml-1 font-medium">'20</span></a>
           <button class="navbar-toggler hamburger mt-2 mr-2" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarText" aria-expanded="false" aria-label="toggleNavBar">
                 <div class="hamburger hamburger--minus">
                       <div class="hamburger-box">
@@ -79,8 +79,8 @@
           </button>
           <div class="collapse navbar-collapse font-medium">
                 <ul class="navbar-nav ml-auto" id="menu">
-                  <li class="nav-item" data-menuanchor="Register">
-                        <a href="#Register" class="nav-link">Register</a>
+                  <li class="nav-item" data-menuanchor="Home">
+                        <a href="#Home" class="nav-link">Home</a>
                   </li>
                   <li class="nav-item" data-menuanchor="Schedule">
                         <a href="#Schedule" class="nav-link">Schedule</a>
@@ -88,8 +88,8 @@
                   <li class="nav-item" data-menuanchor="Learn">
                         <a href="#Learn" class="nav-link" href="#">Learn</a>
                   </li>
-                  <li class="nav-item" data-menuanchor="Prizes">
-                        <a href="#Prizes" class="nav-link" href="#">Prizes</a>
+                  <li class="nav-item" data-menuanchor="Winners">
+                        <a href="#Winners" class="nav-link" href="#">Winners</a>
                   </li>
                   <li class="nav-item" data-menuanchor="Judges">
                         <a href="#Judges" class="nav-link" href="#">Judges</a>
@@ -127,14 +127,14 @@
                           Columbia University
                         </a>
                       </div>
-                      <button class="button-dark" onclick="navigate('https://adi839892.typeform.com/to/HbFw75')">
+                      <!-- <button class="button-dark" onclick="navigate('https://adi839892.typeform.com/to/HbFw75')">
                         Register Here
+                      </button> -->
+                      <button class="button-gray mt-4" onclick="navigate('https://devfest-20.devpost.com/submissions')">
+                        View the hacks on DevPost!
                       </button>
-                      <button class="button-gray" onclick="navigate('https://devfest-20.devpost.com/')">
-                        Post Your Hack on DevPost!
-                      </button>
-                      <button class="button-blue" onclick="navigate('https://www.facebook.com/events/185500132508600/')">
-                        Get Updates on Facebook!
+                      <button class="button-blue mt-2" onclick="navigate('https://www.facebook.com/pg/adicu/events/')">
+                        Find more ADI events on Facebook!
                       </button>
                       <div class="devfest-subtitle font-upper font-small color-gray mt-4">
                         Presented by <a target="_blank" href="https://adicu.com/">ADI</a target="_blank">
@@ -243,59 +243,74 @@
               <img class="bg-winter" alt="winter" ondragstart="return false" src="img/seasons/winter/snowflake.png">
             </div>
           </div>
-          <div id="PrizesPage" class="section">
+          <div id="WinnersPage" class="section">
             <div class="container row">
               <div class="row d-block content p-2">
                 <div class="row font-subtitle mb-4">
-                  🏆 Prizes
+                  🏆 Winners
                 </div>
-                <div class="row track-card mt-3">
+                <div class="row prize-card mt-3">
+                  <div class="d-none d-md-block mr-4">
+                    <div class="prize-img btn" onclick="navigate('img/winners/teech.jpg')" style="background-image: url('img/winners/teech.jpg');"></div>
+                  </div>
                   <div class="prize">
                     <div class="font-heading color-gold mb-1">
                       $1000 + $500 in <a target="_blank" href="https://digitalocean.com">DigitalOcean</a> Credits
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
-                      1st Place
+                      <a target="_blank" href="https://devpost.com/software/teech">Teech</a> – 1st Place
                     </div>
                   </div>
                 </div>
-                <div class="row track-card mt-3">
+                <div class="row prize-card mt-3">
+                  <div class="d-none d-md-block mr-4">
+                    <div class="prize-img btn" onclick="navigate('img/winners/chemsaurus.jpg')" style="background-image: url('img/winners/chemsaurus.jpg');"></div>
+                  </div>
                   <div class="prize">
                     <div class="font-heading color-gray mb-1">
                       $750 + $400 in <a target="_blank" href="https://digitalocean.com">DigitalOcean</a> Credits
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
-                      2nd Place
+                      <a target="_blank" href="https://devpost.com/software/chemsaurus">ChemSaurus</a> – 2nd Place
                     </div>
                   </div>
                 </div>
-                <div class="row track-card mt-3">
+                <div class="row prize-card mt-3">
+                  <div class="d-none d-md-block mr-4">
+                    <div class="prize-img btn" onclick="navigate('img/winners/transcripbot.jpg')" style="background-image: url('img/winners/transcripbot.jpg');"></div>
+                  </div>
                   <div class="prize">
                     <div class="font-heading color-bronze mb-1">
                       <a target="_blank" href="https://en.wikipedia.org/wiki/United_States_dollar">$500</a>
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
-                      3rd Place
+                      <a target="_blank" href="https://devpost.com/software/transcripbot">transcripBot</a> – 3rd Place
                     </div>
                   </div>
                 </div>
                 <div class="row track-card mt-3">
+                  <div class="d-none d-md-block mr-4">
+                    <div class="prize-img btn" onclick="navigate('img/winners/eyes-on-you.jpg')" style="background-image: url('img/winners/eyes-on-you.jpg');"></div>
+                  </div>
                   <div class="prize">
                     <div class="font-heading color-blue mb-1">
                       <a target="_blank" href="https://www.microsoft.com/en-us/p/surface-go/8V9DP4LNKNSZ?s_kwcid=AL!4249!3!281068770621!e!!g!!surface+go&ef_id=CjwKCAiA35rxBRAWEiwADqB37-cLqpL1JkkJLARey13GpRruRbc37wvlRtESYLWwZWLCJCgwejB7-xoCo_EQAvD_BwE%3aG%3as&OCID=AID2000006_SEM_CjwKCAiA35rxBRAWEiwADqB37-cLqpL1JkkJLARey13GpRruRbc37wvlRtESYLWwZWLCJCgwejB7-xoCo_EQAvD_BwE%3aG%3as&activetab=pivot%3aoverviewtab">Surface Go</a>
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
-                      Beginner's Prize
+                      <a target="_blank" href="https://devpost.com/software/eyes-on-you">Eyes on You</a> – Beginner's Prize
                     </div>
                   </div>
                 </div>
                 <div class="row track-card mt-3">
+                  <div class="d-none d-md-block mr-4">
+                    <div class="prize-img btn" onclick="navigate('img/winners/pantrydial.jpg')" style="background-image: url('img/winners/pantrydial.jpg');"></div>
+                  </div>
                   <div class="prize">
                     <div class="font-heading color-green mb-1">
                       $1000 in <a target="_blank" href="https://digitalocean.com">DigitalOcean</a> Credits
                     </div>
                     <div class="font-medium font-upper mb-2 mt-2">
-                      Best Hack for Social Good
+                      <a target="_blank" href="https://devpost.com/software/pantrydial">PantryDial</a> – Best Hack for Social Good
                     </div>
                   </div>
                 </div>
@@ -484,6 +499,7 @@
                 <div class="color-blue my-4">
                   <a target="_blank" href="mailto:devfest@adicu.com">devfest@adicu.com</a target="_blank">
                 </div>
+                <!-- Commented as DevFest has concluded.
                 <div class="bg-blue color-white p-2 rounded font-medium blurb">
                   <i data-feather="alert-triangle" stroke="white" style="width: 40px; margin-right: 10px;" class="d-sm-inline-block d-none"></i>
                   <div style="line-height: 1.5;">
@@ -498,7 +514,7 @@
                     </span>
                     <div style="text-decoration: underline;" class="mt-2"><a href="https://forms.gle/1jxrUCZuursqoejk8" target="_blank">Register for an interview at DevFest here.</a></div>
                   </div>
-                </div>
+                </div> -->
                 <div id="credit" class="font-small mt-4 color-gray">
                   Built by 
                   <span class="color-gray my-4">
@@ -515,10 +531,11 @@
           </div>
     </div>
 
+    <!-- Commented as DevFest has concluded.
     <div id="alert-1" class="alert alert-danger bg-pink">
       <button onclick="closeAlert('alert-1')" class="btn-none"><i data-feather="x" stroke="black" style="width: 1rem; height: 1rem;"></i></button>
       <div style="margin-left: 20px;" onclick="navigate('https://devfest-20.devpost.com/')">Attention hackers! Click here to post your hacks!</div>
-    </div>
+    </div> -->
 
     <!-- FullPage.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.2/vendors/easings.min.js"></script>

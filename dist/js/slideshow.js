@@ -10,7 +10,7 @@ const loadSlideshow = () => {
     fullPageJS = new fullpage('#fullpage', {
         // Navigation
         menu: '#menu',
-        anchors: [ 'Register', 'Schedule', 'Learn', 'Prizes', 'Judges', 'Sponsors', 'FAQ', 'CodeofConduct', 'ContactUs' ],
+        anchors: [ 'Home', 'Schedule', 'Learn', 'Winners', 'Judges', 'Sponsors', 'FAQ', 'CodeofConduct', 'ContactUs' ],
         showActiveTooltip: false,
         slidesNavigation: false,
         slidesNavPosition: 'top',

@@ -209,16 +209,20 @@ li {
 /**
     Button Styles
 */
+.btn {
+    border: none;
+    border-radius: 0;
+}
 button {
     border-radius: 4px;
 }
-button:enabled {
+button:enabled, .btn {
     box-shadow: 0 0 15px 1px rgba(0,0,0,0.04), 0 0 15px 1px rgba(0,0,0,0.04);
 }
 button:enabled a {
     transition: var(0.5);
 }
-button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover {
+button:enabled:hover, a:hover, .chip:hover, .sponsor-image:hover, .btn:hover {
     box-shadow: none;
     -ms-transform: scale(0.95);
     -webkit-transform: scale(0.95);
@@ -437,19 +441,35 @@ div[class^='tui-view-'], div[class*=' tui-view-'] {
 }
 
 /**
-    Judging
+    Judging and Prizes
 */
-.judge-card {
+.prize-card, .judge-card {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: stretch;
+}
+.prize-img, .judge-img {
+    background-position: center;
+    background-size: cover;
 }
 .judge-img {
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    background-position: center;
-    background-size: cover;
+}
+.prize-img {
+    height: 100px;
+    width: 100px;
+    cursor: hand;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.prize {
+    align-self: center;
+}
+.prize > .font-medium a {
+    font-weight: 700;
 }
 
 /**
