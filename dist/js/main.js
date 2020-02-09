@@ -11,3 +11,7 @@ const loadCodeOfConduct = () => {
 const isMobile = () => {
     return window.innerWidth <= 500
 }
+
+const closeAlert = (id) => {
+    document.getElementById(id).style.display = 'none'
+}
